@@ -1,3 +1,12 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.style.use('seaborn-v0_8-pastel')
+cmap = plt.get_cmap('coolwarm')
+plt.set_cmap(cmap)
+
+import statsmodels.distributions.copula.api as cp
+
 def CFD3d(cop, title, resl=50):
     Z = np.zeros((resl, resl), dtype=np.float64)
     for i,u in enumerate(np.linspace(0,1, num=resl)):
