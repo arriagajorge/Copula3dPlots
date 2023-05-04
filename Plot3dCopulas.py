@@ -29,6 +29,7 @@ def CFD3d(cop, title, resl=50):
     ax.set_title(title, fontsize=16)
     plt.savefig(title + "cfd.pdf", format='pdf')
     plt.show()
+    return plt
 
 def PDF3d(cop, title, resl=50):
     Z = np.zeros((resl, resl), dtype=np.float64)
@@ -52,3 +53,4 @@ def PDF3d(cop, title, resl=50):
     ax.set_title(title, fontsize=16)
     plt.savefig(title + "pdf.pdf", format='pdf')
     plt.show()
+    return plt
