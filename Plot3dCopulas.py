@@ -45,7 +45,7 @@ def CFD3d(cop, title, resl=50, savefig=False, cmap='coolwarm', shr=0.5, pltshow=
     
     Raises
     ----------
-    NotImplementedError: If the copula is Student t copula.
+    NotImplementedError
         CDF not available in closed form. If the copula to plot is the Student t copula.
     
     Returns
@@ -63,11 +63,11 @@ def CFD3d(cop, title, resl=50, savefig=False, cmap='coolwarm', shr=0.5, pltshow=
     for i,u in enumerate(np.linspace(0,1, num=resl)):
         for j,v in enumerate(np.linspace(0,1, num=resl)):
             Z[i,j] = cop.cdf([u,v])
-    # Creamos una cuadrícula de puntos en el plano (u,v)
+    # Make a grid of points in [0,1]x[0,1]
     u = v = np.linspace(0, 1, resl)
     U, V = np.meshgrid(u, v)
 
-    # Graficamos la copula de min(u,v) usando plot_surface() y decoramos el gráfico
+    # Plot the surface.
     fig = plt.figure(figsize=figsize)
     ax = fig.add_subplot(111, projection='3d')
     surf = ax.plot_surface(U, V, Z, cmap=cmap)
@@ -75,9 +75,10 @@ def CFD3d(cop, title, resl=50, savefig=False, cmap='coolwarm', shr=0.5, pltshow=
     ax.set_xlabel(xlabel, fontsize=fontsizeAxis)
     ax.set_ylabel(ylabel, fontsize=fontsizeAxis)
     ax.set_zlabel(zlabel, fontsize=fontsizeAxis)
+    ax.set_title(title, fontsize=fontsizeTitle)
     #ax.set_zlim(0,10)
     #ax.view_init(elev=15, azim=90)
-    ax.set_title(title, fontsize=fontsizeTitle)
+    
     if savefig:
         plt.savefig(title + "cfd.pdf", format='pdf')
     if pltshow:
@@ -136,11 +137,11 @@ def PDF3d(cop, title, resl=50, savefig=False, cmap='coolwarm', shr=0.5, pltshow=
     for i,u in enumerate(np.linspace(0,1, num=resl)):
         for j,v in enumerate(np.linspace(0,1, num=resl)):
             Z[i,j] = cop.pdf([u,v])
-    # Creamos una cuadrícula de puntos en el plano (u,v)
+    # Make a grid of points in [0,1]x[0,1]
     u = v = np.linspace(0, 1, resl)
     U, V = np.meshgrid(u, v)
 
-    # Graficamos la copula de min(u,v) usando plot_surface() y decoramos el gráfico
+    # Plot the surface.
     fig = plt.figure(figsize=figsize)
     ax = fig.add_subplot(111, projection='3d')
     surf = ax.plot_surface(U, V, Z, cmap=cmap)
@@ -148,13 +149,14 @@ def PDF3d(cop, title, resl=50, savefig=False, cmap='coolwarm', shr=0.5, pltshow=
     ax.set_xlabel(xlabel, fontsize=fontsizeAxis)
     ax.set_ylabel(ylabel, fontsize=fontsizeAxis)
     ax.set_zlabel(zlabel, fontsize=fontsizeAxis)
+    ax.set_title(title, fontsize=fontsizeTitle)
     #ax.set_zlim(0,10)
     #ax.view_init(elev=15, azim=90)
-    ax.set_title(title, fontsize=fontsizeTitle)
+    
     if savefig:
         plt.savefig(title + "pdf.pdf", format='pdf')
     if pltshow:
         plt.show()
     return plt
 
-#TODO add folders
+#TODO add folders, and README
