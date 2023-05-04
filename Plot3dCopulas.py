@@ -45,7 +45,7 @@ def CFD3d(cop, title, resl=50, savefig=False, cmap='coolwarm', shr=0.5, pltshow=
     
     Raises
     ----------
-    NotImplementedError
+    NotImplementedError: If the copula is Student t copula.
         CDF not available in closed form. If the copula to plot is the Student t copula.
     
     Returns
