@@ -52,6 +52,12 @@ def CFD3d(cop, title, resl=50, savefig=False, cmap='coolwarm', shr=0.5, pltshow=
     ----------
     plt : matplotlib.pyplot
         Plot of the CDF of the copula
+        
+    Examples
+    ----------
+    import statsmodels.distributions.copula as cp
+    CFD3d(cp.GaussianCopula(corr=0.5), title="Cópula Gaussiana")
+    CFD3d(cp.GaussianCopula(corr=0.5), title="Cópula Gaussiana", resl=75, figsave=True, pltshow=False)
     """
     Z = np.zeros((resl, resl), dtype=np.float64)
     for i,u in enumerate(np.linspace(0,1, num=resl)):
@@ -119,6 +125,12 @@ def PDF3d(cop, title, resl=50, savefig=False, cmap='coolwarm', shr=0.5, pltshow=
     ----------
     plt : matplotlib.pyplot
         Plot of the CDF of the copula
+        
+    Examples
+    ----------
+    import statsmodels.distributions.copula as cp
+    PDF3d(cp.GaussianCopula(corr=0.5), title="Cópula Gaussiana")
+    PDF3d(cp.GaussianCopula(corr=0.5), title="Cópula Gaussiana", resl=100, cmap='viridis', figsave=True, pltshow=False)
     """
     Z = np.zeros((resl, resl), dtype=np.float64)
     for i,u in enumerate(np.linspace(0,1, num=resl)):
@@ -144,3 +156,5 @@ def PDF3d(cop, title, resl=50, savefig=False, cmap='coolwarm', shr=0.5, pltshow=
     if pltshow:
         plt.show()
     return plt
+
+#TODO add folders
