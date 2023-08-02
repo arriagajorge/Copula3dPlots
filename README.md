@@ -1,4 +1,4 @@
-Uso de Plot3dCopulas.py
+Using Plot3dCopulas.py
 
 ```Python
 import numpy as np
