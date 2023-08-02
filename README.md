@@ -14,9 +14,8 @@ import Plot3dCopulas as cop
 # copula gaussina corr=0.5
 gc = cp.GaussianCopula(corr=0.5)
 
+#Plot3D CFD & PDF
 cop.CFD3d(gc, title="Cópula Gaussiana")
-
-
 cop.PDF3d(gc, title="Cópula Gaussiana")
 ```
 ![CFD Plot](https://drive.google.com/file/d/1L2f2HCvF6DUfX65cCJsdRss9UFPaGUKo/view?usp=sharing)
