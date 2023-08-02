@@ -19,8 +19,8 @@ cop.CFD3d(gc, title="Cópula Gaussiana")
 cop.PDF3d(gc, title="Cópula Gaussiana")
 ```
 
-![CFD Plot](https://drive.google.com/uc?export=view&id=/1L2f2HCvF6DUfX65cCJsdRss9UFPaGUKo/)
-![PDF Plot](https://drive.google.com/uc?export=view&id=/1f0EGTKc5zpAmoN12dALj3EGyFTPDBg_F/)
+![CFD Plot](https://drive.google.com/uc?export=view&id=/L2f2HCvF6DUfX65cCJsdRss9UFPaGUKo)
+![PDF Plot](https://drive.google.com/uc?export=view&id=1f0EGTKc5zpAmoN12dALj3EGyFTPDBg_F)
 
 Issues:
 CFD cannot be plotted from the t-student copula.
