@@ -15,20 +15,18 @@ import Plot3dCopulas as cop
 gc = cp.GaussianCopula(corr=0.5)
 
 #Plot3D CFD & PDF
+cop.PDF3d(gc, title="Cópula Gaussiana")
+```
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1f0EGTKc5zpAmoN12dALj3EGyFTPDBg_F" alt="PDF Plot">
+</p>
+
+```Python
 cop.CFD3d(gc, title="Cópula Gaussiana")
 ```
 <p align="center">
   <img src="https://drive.google.com/uc?export=view&id=1L2f2HCvF6DUfX65cCJsdRss9UFPaGUKo" alt="CFD Plot">
 </p>
-
-```Python
-cop.PDF3d(gc, title="Cópula Gaussiana")
-```
-
-<p align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1f0EGTKc5zpAmoN12dALj3EGyFTPDBg_F" alt="PDF Plot">
-</p>
-
 
 The functions are made in such a way that you can modify parameters e.g. resolution, cmap, fontsize, etc.
 
