@@ -25,5 +25,7 @@ cop.PDF3d(gc, title="Cópula Gaussiana")
 ```
 ![PDF Plot](https://drive.google.com/uc?export=view&id=1f0EGTKc5zpAmoN12dALj3EGyFTPDBg_F)
 
+The functions are made in such a way that you can modify parameters e.g. resolution, cmap, fontsize, etc.
+
 Issues:
 CFD cannot be plotted from the t-student copula.
